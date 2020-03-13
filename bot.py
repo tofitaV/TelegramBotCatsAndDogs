@@ -75,9 +75,5 @@ logging.basicConfig(filename="newfile.log",
 logger = telebot.logger
 telebot.logger.setLevel(logging.INFO)
 
-while True:
-    try:
-        bot.polling(none_stop=True)
-    except Exception as e:
-        logger.error(e)
-        time.sleep(15)
+
+bot.polling(none_stop=True)
